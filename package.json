@@ -7,8 +7,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "deploy": "tsc && ./update_release.sh",
-    "start": "node lib/main.js"
+    "deploy": "tsc && ./update_release.sh"
   },
   "repository": {
     "type": "git",
