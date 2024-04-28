@@ -69,7 +69,6 @@ runs:
       shell: bash
     - run: npm test
       shell: bash
-    - run: cd ./
-      shell: bash
-    - run: node lib/main.js
+    - working-directory: ./
+      run: node lib/main.js
       shell: bash
