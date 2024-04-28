@@ -44,7 +44,7 @@ jobs:
   release:
     needs: test
     runs-on: ubuntu-latest
-    name: Update action
+    name: Update Action
 
     steps:
       - uses: actions/checkout@v1
