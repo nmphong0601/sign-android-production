@@ -1,6 +1,6 @@
 name: 'Sign Android release'
 description: 'An action to sign an Android release APK or AAB'
-author: 'r0adkll'
+author: 'nmphong0601'
 branding:
   icon: 'edit'
   color: 'orange'
@@ -66,5 +66,5 @@ runs:
       shell: bash
     - run: npm test
       shell: bash
-    - run: node ${{ github.action_path }}/lib/main.js
+    - run: npm run start
       shell: bash
