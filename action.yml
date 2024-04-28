@@ -66,5 +66,6 @@ runs:
       shell: bash
     - run: npm test
       shell: bash
-    - run: node ${{ github.action_path }}lib/main.js
+    - run: |
+        cd ${{ github.action_path }} && node lib/main.js
       shell: bash
