@@ -53,22 +53,23 @@ outputs:
     description: 'The 11th signed release APK or AAB file'
   signedReleaseFile12:
     description: 'The 12th signed release APK or AAB file'
-runs:
-  using: 'node20'
-  main: 'lib/main.js'
 # runs:
-#   using: "composite"
-#   steps: 
-#     - uses: actions/checkout@v4
-#     - uses: actions/setup-node@v4
-#       with:
-#         node-version: 18
-#     - run: npm install
-#       shell: bash
-#     - run: npm ci
-#       shell: bash
-#     - run: npm test
-#       shell: bash
-#     - working-directory: ./lib
-#       run: node main.js
-#       shell: bash
+#   using: 'node20'
+#   main: 'lib/main.js'
+runs:
+  using: "composite"
+  steps: 
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 18
+    - run: npm install
+      shell: bash
+    - run: npm ci
+      shell: bash
+    - run: npm test
+      shell: bash
+    - run: ./
+      shell: bash
+    - run: node lib/main.js
+      shell: bash
