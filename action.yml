@@ -56,3 +56,11 @@ outputs:
 runs:
   using: 'node12'
   main: 'lib/main.js'
+  steps: 
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 18
+    - run: npm run install
+    - run: npm ci
+    - run: npm test
