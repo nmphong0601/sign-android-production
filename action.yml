@@ -55,13 +55,16 @@ outputs:
     description: 'The 12th signed release APK or AAB file'
 runs:
   using: "composite"
-  shell: bash
   steps: 
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
         node-version: 18
     - run: npm run install
+      shell: bash
     - run: npm ci
+      shell: bash
     - run: npm test
+      shell: bash
     - run: node lib/main.js
+      shell: bash
