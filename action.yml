@@ -54,8 +54,7 @@ outputs:
   signedReleaseFile12:
     description: 'The 12th signed release APK or AAB file'
 runs:
-  using: 'node12'
-  main: 'lib/main.js'
+  using: "composite"
   steps: 
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
@@ -64,3 +63,4 @@ runs:
     - run: npm run install
     - run: npm ci
     - run: npm test
+    - run: node lib/main.js
