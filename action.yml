@@ -55,6 +55,7 @@ outputs:
     description: 'The 12th signed release APK or AAB file'
 runs:
   using: "composite"
+  shell: bash
   steps: 
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
