@@ -1,6 +1,6 @@
 {
-  "name": "sign-android-release",
-  "version": "1.0.4",
+  "name": "sign-android-production",
+  "version": "1.0.0",
   "private": true,
   "description": "GitHub action used to sign Android release packages",
   "main": "lib/main.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/r0adkll/sign-android-release.git"
+    "url": "git+https://github.com/nmphong0601/sign-android-production.git"
   },
   "keywords": [
     "actions",
     "node",
     "setup"
   ],
-  "author": "r0adkll",
+  "author": "nmphong0601",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6",
