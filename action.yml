@@ -60,7 +60,7 @@ runs:
     - uses: actions/setup-node@v4
       with:
         node-version: 18
-    - run: npm run install
+    - run: npm install
       shell: bash
     - run: npm ci
       shell: bash
