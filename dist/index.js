@@ -85,7 +85,8 @@ function run() {
             if (releaseFiles !== undefined) {
                 // 3. Now that we have a release files, decode and save the signing key
                 const signingKey = path_1.default.join(releaseDir, 'signingKey.jks');
-                fs_1.default.writeFileSync(signingKey, signingKeyBase64, 'base64');
+                // fs_1.default.writeFileSync(signingKey, signingKeyBase64, 'base64');
+                fs_1.default.writeFileSync(signingKey, signingKeyBase64, { encoding: 'base64', flag: 'a' });
                 // 4. Now zipalign and sign each one of the the release files
                 for (let releaseFile of releaseFiles) {
                     core.debug(`Found release to sign: ${releaseFile.name}`);
